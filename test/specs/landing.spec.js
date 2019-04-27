@@ -1,10 +1,10 @@
-import LandingPage from '../page-objects/landing.page';
+import MyAppPage from '../page-objects/myApp.page';
 import { expect } from 'chai';
 
-describe('webdriver.io page', () => {
+describe('Open WC landing page', () => {
     it('should have the right title', () => {
-        LandingPage.open();
-        expect(LandingPage.getTitle()).to.contain('my-app');
-        expect(LandingPage.subtitle.getText()).to.contain('open-wc')
+        MyAppPage.open();
+        expect(MyAppPage.getTitle()).to.contain('my-app');
+        expect(MyAppPage.myAppComponent.subTitle.getText()).to.contain('open-wc')
     });
 });
